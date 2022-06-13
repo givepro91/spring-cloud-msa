@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: config-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   profiles:
     active: native
   cloud:
@@ -16,3 +21,9 @@ spring:
           uri: https://github.com/givepro91/SpringCloudMsa-Config.git
 #          username: [your username] private repository
 #          password: [your password] private repository
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
