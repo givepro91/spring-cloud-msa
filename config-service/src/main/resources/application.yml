@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file://${user.home}/Work/native-file-repo
+        git:
+#          uri: file:///Users/develop/Projects/SpringCloudMsa/git-local-repo
+          uri: https://github.com/givepro91/SpringCloudMsa-Config.git
+#          username: [your username] private repository
+#          password: [your password] private repository
